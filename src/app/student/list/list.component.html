@@ -1,0 +1,25 @@
+
+<h1>List of Firebasr student</h1>
+<button (click)="logout()" type="submit">LOg-out</button>
+
+<table id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Age</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+
+    <tr *ngFor="let item of student">
+        <td (keyup)="item.name = $event.target.innerHTML; item.isChanged = true" contenteditable="true" >{{item.name}}</td>
+        <td (keyup)="item.class = $event.target.innerHTML; item.isChanged = true" contenteditable="true">{{item.class}}</td>
+        <td (keyup)="item.age = $event.target.innerHTML; item.isChanged = true" contenteditable="true">{{item.age}}</td>
+        <td><button (click)="updatestudent(item)" class="button"><span>Update</span></button></td>
+        <td><button (click)="deletestudent(item.key)" id="2" class="button" style="background-color: red;"><span>delete</span></button></td>
+    </tr>
+</table>
+<span (click)="create()" class="material-icons">
+    add_circle
+</span>
+

@@ -1,0 +1,28 @@
+<p>login works!</p>
+
+
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span class="material-icons">
+        account_circle
+        </span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input [(ngModel)]="name" type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input [(ngModel)]="password" type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button (click)="login()" type="submit">Login</button>
+      <button (click)="signup()" type="submit">Signup</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+  </form>
+
+
